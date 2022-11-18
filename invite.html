@@ -1,0 +1,32 @@
+{{if eq .Data.language "de"}}
+
+<h2>Einladung für asset.swissgeol.ch Login</h2>
+
+<p>Guten Tag {{ .Data.firstName }} {{ .Data.lastName }}</p>
+<p>
+    Es wurde für Sie ein Login erstellt für den Zugang bei asset.swissgeol.ch. Bitte aktivieren Sie den Benutzer über
+    den folgenden Link:<br />
+    <a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+</p>
+<p>
+    Freundliche Grüsse<br />
+    Ihr Swisstopo Team
+</p>
+
+{{else if eq .Data.language "fr"}}
+
+FR: {{ .ConfirmationURL }}
+
+{{else if eq .Data.language "it"}}
+
+IT: {{ .ConfirmationURL }}
+
+{{else if eq .Data.language "rm"}}
+
+RM: {{ .ConfirmationURL }}
+
+{{else}}
+
+EN: {{ .ConfirmationURL }}
+
+{{end}}
