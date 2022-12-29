@@ -27,6 +27,16 @@ RM: {{ .ConfirmationURL }}
 
 {{else}}
 
-EN: {{ .ConfirmationURL }}
+<h2>Invitation to access.swissgeol.ch</h2>
+
+<p>Dear {{ .Data.firstName }} {{ .Data.lastName }}</p>
+<p>
+    A login has been created for you to access assset.swissgeol.ch. Please activate the user via the following link:<br/>
+    <a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+</p>
+<p>
+    Best regards<br />
+    Your Swisstopo Team
+</p>
 
 {{end}}

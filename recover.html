@@ -1,0 +1,46 @@
+{{if eq .Data.language "de"}}
+
+<h2>Passwort zurücksetzen für access.swissgeol.ch</h2>
+
+<p>
+    Folgen Sie diesem Link, um das Passwort für Ihren Benutzer zurückzusetzen:
+    <a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+</p>
+<p>
+    Freundliche Grüsse<br />
+    Ihr Swisstopo Team
+</p>
+
+{{else if eq .Data.language "fr"}}
+
+<h2> FR: Passwort zurücksetzen für access.swissgeol.ch</h2>
+
+<a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+
+
+{{else if eq .Data.language "it"}}
+
+<h2> IT: Passwort zurücksetzen für access.swissgeol.ch</h2>
+
+<a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+
+{{else if eq .Data.language "rm"}}
+
+<h2> RM: Passwort zurücksetzen für access.swissgeol.ch</h2>
+
+<a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+
+{{else}}
+
+<h2>Password reset for access.swissgeol.ch</h2>
+
+<p>
+    Follow this link to reset the password for your user:
+    <a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+</p>
+<p>
+    Best regards<br />
+    Your Swisstopo Team
+</p>
+
+{{end}}
