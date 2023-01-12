@@ -1,12 +1,12 @@
-{{if eq .Data.language "de"}}
+{{if eq .Data.lang "de"}}
 
 <h2>Einladung für asset.swissgeol.ch Login</h2>
 
-<p>Guten Tag {{ .Data.firstName }} {{ .Data.lastName }}</p>
+<p>Guten Tag</p>
 <p>
     Es wurde für Sie ein Login erstellt für den Zugang bei asset.swissgeol.ch. Bitte aktivieren Sie den Benutzer über
     den folgenden Link:<br />
-    <a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+    <a href="{{ .ConfirmationURL }}&lang=de">{{ .ConfirmationURL }}&lang=en</a>
 </p>
 <p>
     Freundliche Grüsse<br />
@@ -15,24 +15,30 @@
 
 {{else if eq .Data.language "fr"}}
 
-FR: {{ .ConfirmationURL }}
+<h2>FR: Einladung für asset.swissgeol.ch Login</h2>
+
+<a href="{{ .ConfirmationURL }}&lang=fr">{{ .ConfirmationURL }}&lang=fr</a>
 
 {{else if eq .Data.language "it"}}
 
-IT: {{ .ConfirmationURL }}
+<h2>IT: Einladung für asset.swissgeol.ch Login</h2>
+
+<a href="{{ .ConfirmationURL }}&lang=it">{{ .ConfirmationURL }}&lang=it</a>
 
 {{else if eq .Data.language "rm"}}
 
-RM: {{ .ConfirmationURL }}
+<h2>RM: Einladung für asset.swissgeol.ch Login</h2>
+
+<a href="{{ .ConfirmationURL }}&lang=rm">{{ .ConfirmationURL }}&lang=rm</a>
 
 {{else}}
 
 <h2>Invitation to access.swissgeol.ch</h2>
 
-<p>Dear {{ .Data.firstName }} {{ .Data.lastName }}</p>
+<p>Hello</p>
 <p>
-    A login has been created for you to access assset.swissgeol.ch. Please activate the user via the following link:<br/>
-    <a href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a>
+    A login has been created for you to access assset.swissgeol.ch. Please activate the user via the following link:<br />
+    <a href="{{ .ConfirmationURL }}&lang=en">{{ .ConfirmationURL }}&lang=en</a>
 </p>
 <p>
     Best regards<br />
