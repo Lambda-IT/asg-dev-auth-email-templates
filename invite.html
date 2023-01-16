@@ -1,9 +1,11 @@
 {{if eq .Data.lang "de"}}
 
-<h2>Passwort zurücksetzen für access.swissgeol.ch</h2>
+<h2>Einladung für asset.swissgeol.ch Login</h2>
 
+<p>Guten Tag</p>
 <p>
-    Folgen Sie diesem Link, um das Passwort für Ihren Benutzer zurückzusetzen:<br />
+    Es wurde für Sie ein Login erstellt für den Zugang bei asset.swissgeol.ch. Bitte aktivieren Sie den Benutzer über
+    den folgenden Link:<br />
     <a href="{{ .ConfirmationURL }}&lang=de">{{ .ConfirmationURL }}&lang=de</a>
 </p>
 <p>
@@ -13,28 +15,30 @@
 
 {{else if eq .Data.lang "fr"}}
 
-<h2>FR: Passwort zurücksetzen für access.swissgeol.ch</h2>
+<h2>FR: Einladung für asset.swissgeol.ch Login</h2>
 
 <a href="{{ .ConfirmationURL }}&lang=fr">{{ .ConfirmationURL }}&lang=fr</a>
 
 {{else if eq .Data.lang "it"}}
 
-<h2>IT: Passwort zurücksetzen für access.swissgeol.ch</h2>
+<h2>IT: Einladung für asset.swissgeol.ch Login</h2>
 
 <a href="{{ .ConfirmationURL }}&lang=it">{{ .ConfirmationURL }}&lang=it</a>
 
 {{else if eq .Data.lang "rm"}}
 
-<h2>RM: Passwort zurücksetzen für access.swissgeol.ch</h2>
+<h2>RM: Einladung für asset.swissgeol.ch Login</h2>
 
 <a href="{{ .ConfirmationURL }}&lang=rm">{{ .ConfirmationURL }}&lang=rm</a>
 
 {{else}}
 
-<h2>Password reset for access.swissgeol.ch</h2>
+<h2>Invitation to access.swissgeol.ch</h2>
 
+<p>Hello</p>
 <p>
-    Follow this link to reset the password for your user:<br />
+    A login has been created for you to access assset.swissgeol.ch. Please activate the account via the following
+    link:<br />
     <a href="{{ .ConfirmationURL }}&lang=en">{{ .ConfirmationURL }}&lang=en</a>
 </p>
 <p>
